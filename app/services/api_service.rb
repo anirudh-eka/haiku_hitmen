@@ -47,6 +47,7 @@ class APIService
     response = HTTParty.get("https://api.twitter.com/1.1/search/tweets.json?q=%23#{hashtag}",
     :headers => { "Authorization" => "Bearer #{twitter_bearer_token}",
       "User-Agent" => "#NAAwayDay Feed v1.0"})
+    
     TweetParser.parse(response.parsed_response)
   end
 
