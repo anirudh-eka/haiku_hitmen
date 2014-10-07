@@ -50,7 +50,7 @@ describe APIService do
         sleep ENV["API_Rate"].to_i + 0.5
       end
       context "when twitter api keys are not provided in the env" do
-        it "should not pull from twitter and parse" do
+        xit "should not pull from twitter and parse" do
           default_env_twitter_keys = ENV["TWITTER_BEARER_CREDENTIALS"]
           ENV["TWITTER_BEARER_CREDENTIALS"] = ""
           expect(APIService.instance).to_not receive(:pull_twitter_posts_and_parse)
@@ -59,7 +59,7 @@ describe APIService do
         end
       end
       context "when instagram api keys are not provided in the env" do
-        it "should not pull from twitter and parse" do
+        xit "should not pull from twitter and parse" do
           default_env_instagram_keys = ENV["INSTAGRAM_CLIENT_ID"]
           ENV["INSTAGRAM_CLIENT_ID"] = ""
           expect(APIService.instance).to_not receive(:pull_instagram_posts_and_parse)
