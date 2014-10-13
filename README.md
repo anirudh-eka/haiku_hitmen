@@ -1,4 +1,4 @@
 Haiku Hitmen
-=================
+=======
 
-This is an instance of [Hashtag Displayer](https://github.com/anirudh-eka/hashtag_displayer).
+This is an instance of [Dahstag](https://github.com/anirudh-eka/dashtag).
