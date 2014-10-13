@@ -37,6 +37,7 @@ class APIService
   private
 
 	def pull_instagram_posts_and_parse(hashtag)
+    puts "instagram" * 20
     instagram_client_id = EnvironmentService.instagram_client_id
     response = HTTParty.get("https://api.instagram.com/v1/tags/#{hashtag}/media/recent?client_id=#{instagram_client_id}")
 
@@ -44,6 +45,7 @@ class APIService
 	end
 
   def pull_twitter_posts_and_parse(hashtag)
+    puts "twitter" * 20
     response = HTTParty.get("https://api.twitter.com/1.1/search/tweets.json?q=%23#{hashtag}",
     :headers => { "Authorization" => "Bearer #{twitter_bearer_token}",
       "User-Agent" => "#NAAwayDay Feed v1.0"})
